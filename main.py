@@ -17,9 +17,9 @@ cat = list(expense.keys())
 # Start of the main program loop
 while True:
     # Ask the user whether they want to add expenses or exit
-    c = input("press y to add expenses or n to exit \n")
+    user_choice = input("press y to add expenses or n to exit \n")
     
-    if c == "y":  # If the user chooses to add expenses
+    if user_choice == "y":  # If the user chooses to add expenses
         # Create an empty dictionary to store entered amounts for each category
         amounts = {}
 
@@ -48,7 +48,7 @@ while True:
         # Print the total expenses
         print(f"Your total comes up to R{total}")
 
-    elif c == "n":  # If the user chooses to exit
+    elif user_choice == "n":  # If the user chooses to exit
         # Print goodbye message and break the loop
         print("Goodbye!")
         break
