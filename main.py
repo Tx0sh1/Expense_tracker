@@ -1,11 +1,12 @@
 print("Welcome to the expense tracker")
+print("")
 
 expense = {
     'food': 0,
     'rent': 0,
     'transport': 0,
     'Life Policies' : 0,
-    'maintainance' : 0
+    'maintenance' : 0
 }
 
 cat = list(expense.keys())
