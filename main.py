@@ -7,8 +7,9 @@ expense = {
     'Life Policies' : 0,
     'maintainance ' : 0
 }
+
 while True:
-    c = input(" press y to add expenses or n to exit \n ").lower
+    c = input(" press y to add expenses or n to exit \n ")
     if c == "y":
         try:
             expense['food'] = int(input("enter the amount u use on food: \n"))
@@ -28,5 +29,3 @@ while True:
     if c == "n":
         ("Print Goodbye")
         break
-
-
