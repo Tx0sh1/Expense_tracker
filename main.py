@@ -5,27 +5,37 @@ expense = {
     'rent': 0,
     'transport': 0,
     'Life Policies' : 0,
-    'maintainance ' : 0
+    'maintainance' : 0
 }
 
-while True:
-    c = input(" press y to add expenses or n to exit \n ")
-    if c == "y":
-        try:
-            expense['food'] = int(input("enter the amount u use on food: \n"))
-            expense['rent'] = int(input("enter the amount you use on rent: \n"))
-            expense['transport'] = int(input("enter the amount you use on transport: \n"))
-            expense['Life Policies'] = int(input("enter the amount you use on life policies: \n"))
-            expense['maintainance '] = int(input("enter the amount you use for maintainance : \n"))
-            
-            total = expense['food'] + expense['rent'] + expense['transport'] + expense['Life Policies'] + expense['maintainance ']
+cat = list(expense.keys())
 
-            print(f"you entered R{expense['food']} for food, R{expense['rent']} for rent, \
-                R{expense['transport']} for transport, R{expense['Life Policies']} for life policies, \
-                and R{expense['maintainance ']} for maintainance , which makes a total of R{total}")
+while True:
+    c = input("press y to add expenses or n to exit \n")
+    if c == "y":
+        
             
-        except ValueError:
-            print("enter an amount in numbers!")
+            amounts = {}  # Dictionary to store amounts for each category
+
+            for i in cat:
+                while True:
+                    try:
+                        x = int(input(f"Enter amount for {i}: "))
+                        amounts[i] = x  # Store the input amount with the category as the key
+                        break
+                    except ValueError:
+                        print("enter an amount in numbers!")
+            
+            k_list = list(amounts.keys())
+            v_list = list(amounts.values())        
+            total =sum(amounts.values())
+
+            for k, v in zip(k_list, v_list):
+                print(f"You've entered R{v} for {k}")
+            print(f"Your total comes up to R{total}")
+            
+                
     elif c == "n":
         print("Goodbye!")
         break
+    
