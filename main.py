@@ -26,6 +26,6 @@ while True:
             
         except ValueError:
             print("enter an amount in numbers!")
-    if c == "n":
-        ("Print Goodbye")
+    elif c == "n":
+        print("Goodbye!")
         break
